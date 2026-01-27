@@ -23,6 +23,52 @@
             flex-direction: column;
         }
 
+        .telegram-link {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            padding: 12px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        .telegram-link:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(108, 123, 255, 0.3);
+        }
+
+        .telegram-icon {
+            width: 20px;
+            height: 20px;
+            stroke: #00D4AA;
+            fill: none;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            flex-shrink: 0;
+        }
+
+        .telegram-text {
+            font-size: 16px;
+            color: #ffffff;
+            white-space: nowrap;
+        }
+
+        .telegram-text .telegram-word {
+            color: #00D4AA;
+            font-weight: 600;
+        }
+
         /* Текстура фона для эффекта зернистости */
         body::before {
             content: '';
@@ -533,6 +579,21 @@
             .subtitle-tagline {
                 font-size: 16px;
             }
+
+            .telegram-link {
+                top: 15px;
+                right: 15px;
+                padding: 10px 15px;
+            }
+
+            .telegram-text {
+                font-size: 14px;
+            }
+
+            .telegram-icon {
+                width: 18px;
+                height: 18px;
+            }
             
             .logo {
                 width: 120px;
@@ -596,6 +657,14 @@
     </style>
 </head>
 <body>
+    <!-- Telegram ссылка в правом верхнем углу -->
+    <a href="https://t.me/liberty_oreon_manager" class="telegram-link" target="_blank">
+        <svg class="telegram-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+        </svg>
+        <span class="telegram-text">Общайтесь с нами в <span class="telegram-word">Telegram</span></span>
+    </a>
+
     <div class="container">
         <header class="header">
             <div class="logo-container">
@@ -836,3 +905,4 @@
     </footer>
 </body>
 </html>
+
