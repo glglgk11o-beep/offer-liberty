@@ -260,6 +260,21 @@
             background-color: rgba(255, 255, 255, 0.1);
         }
 
+        .region-flag:not([src]),
+        .region-flag[src=""],
+        img.region-flag[src*="Pages"]:not([src*=".png"]):not([src*=".jpg"]):not([src*=".svg"]) {
+            background: linear-gradient(135deg, rgba(108, 123, 255, 0.3), rgba(219, 99, 219, 0.3));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .region-flag:not([src])::after,
+        .region-flag[src=""]::after {
+            content: "🏳️";
+            font-size: 24px;
+        }
+
         .region-item:hover .region-flag {
             border-color: rgba(108, 123, 255, 0.6);
             box-shadow: 0 6px 20px rgba(108, 123, 255, 0.4);
@@ -842,31 +857,31 @@
             <h3 class="regions-title">Доступные регионы</h3>
             <div class="regions-container">
                 <div class="region-item">
-                    <img src="Pages/ru.png" alt="RU" class="region-flag">
+                    <img src="./Pages/ru.png" alt="RU" class="region-flag" onerror="this.onerror=null; this.style.background='linear-gradient(135deg, rgba(108,123,255,0.3), rgba(219,99,219,0.3))'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.innerHTML='🏳️';">
                     <span class="region-code">RU</span>
                 </div>
                 <div class="region-item">
-                    <img src="Pages/uzb.png" alt="UZB" class="region-flag">
+                    <img src="./Pages/uzb.png" alt="UZB" class="region-flag" onerror="this.onerror=null; this.style.background='linear-gradient(135deg, rgba(108,123,255,0.3), rgba(219,99,219,0.3))'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.innerHTML='🏳️';">
                     <span class="region-code">UZB</span>
                 </div>
                 <div class="region-item">
-                    <img src="Pages/kz.png" alt="KZ" class="region-flag">
+                    <img src="./Pages/kz.png" alt="KZ" class="region-flag" onerror="this.onerror=null; this.style.background='linear-gradient(135deg, rgba(108,123,255,0.3), rgba(219,99,219,0.3))'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.innerHTML='🏳️';">
                     <span class="region-code">KZ</span>
                 </div>
                 <div class="region-item">
-                    <img src="Pages/tjk.png" alt="TJK" class="region-flag">
+                    <img src="./Pages/tjk.png" alt="TJK" class="region-flag" onerror="this.onerror=null; this.style.background='linear-gradient(135deg, rgba(108,123,255,0.3), rgba(219,99,219,0.3))'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.innerHTML='🏳️';">
                     <span class="region-code">TJK</span>
                 </div>
                 <div class="region-item">
-                    <img src="Pages/kgz.png" alt="KGZ" class="region-flag">
+                    <img src="./Pages/kgz.png" alt="KGZ" class="region-flag" onerror="this.onerror=null; this.style.background='linear-gradient(135deg, rgba(108,123,255,0.3), rgba(219,99,219,0.3))'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.innerHTML='🏳️';">
                     <span class="region-code">KGZ</span>
                 </div>
                 <div class="region-item">
-                    <img src="Pages/arm.png" alt="ARM" class="region-flag">
+                    <img src="./Pages/arm.png" alt="ARM" class="region-flag" onerror="this.onerror=null; this.style.background='linear-gradient(135deg, rgba(108,123,255,0.3), rgba(219,99,219,0.3))'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.innerHTML='🏳️';">
                     <span class="region-code">ARM</span>
                 </div>
                 <div class="region-item">
-                    <img src="Pages/az.png" alt="AZ" class="region-flag">
+                    <img src="./Pages/az.png" alt="AZ" class="region-flag" onerror="this.onerror=null; this.style.background='linear-gradient(135deg, rgba(108,123,255,0.3), rgba(219,99,219,0.3))'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.innerHTML='🏳️';">
                     <span class="region-code">AZ</span>
                 </div>
             </div>
@@ -1100,3 +1115,4 @@
     </footer>
 </body>
 </html>
+
