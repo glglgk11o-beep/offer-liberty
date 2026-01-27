@@ -254,10 +254,10 @@
             border-radius: 50%;
             border: 3px solid rgba(255, 255, 255, 0.3);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+            object-fit: cover;
+            display: block;
             transition: all 0.3s ease;
+            background-color: rgba(255, 255, 255, 0.1);
         }
 
         .region-item:hover .region-flag {
@@ -842,31 +842,31 @@
             <h3 class="regions-title">Доступные регионы</h3>
             <div class="regions-container">
                 <div class="region-item">
-                    <div class="region-flag" style="background-image: url('Pages/ru.png');"></div>
+                    <img src="Pages/ru.png" alt="RU" class="region-flag">
                     <span class="region-code">RU</span>
                 </div>
                 <div class="region-item">
-                    <div class="region-flag" style="background-image: url('Pages/uzb.png');"></div>
+                    <img src="Pages/uzb.png" alt="UZB" class="region-flag">
                     <span class="region-code">UZB</span>
                 </div>
                 <div class="region-item">
-                    <div class="region-flag" style="background-image: url('Pages/kz.png');"></div>
+                    <img src="Pages/kz.png" alt="KZ" class="region-flag">
                     <span class="region-code">KZ</span>
                 </div>
                 <div class="region-item">
-                    <div class="region-flag" style="background-image: url('Pages/tjk.png');"></div>
+                    <img src="Pages/tjk.png" alt="TJK" class="region-flag">
                     <span class="region-code">TJK</span>
                 </div>
                 <div class="region-item">
-                    <div class="region-flag" style="background-image: url('Pages/kgz.png');"></div>
+                    <img src="Pages/kgz.png" alt="KGZ" class="region-flag">
                     <span class="region-code">KGZ</span>
                 </div>
                 <div class="region-item">
-                    <div class="region-flag" style="background-image: url('Pages/arm.png');"></div>
+                    <img src="Pages/arm.png" alt="ARM" class="region-flag">
                     <span class="region-code">ARM</span>
                 </div>
                 <div class="region-item">
-                    <div class="region-flag" style="background-image: url('Pages/az.png');"></div>
+                    <img src="Pages/az.png" alt="AZ" class="region-flag">
                     <span class="region-code">AZ</span>
                 </div>
             </div>
