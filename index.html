@@ -211,45 +211,270 @@
             transform: translateY(-1px);
         }
 
+        /* Маркетинговые секции */
+        .marketing-section {
+            margin-top: 120px;
+            margin-bottom: 80px;
+        }
+
+        .section-title {
+            font-size: 48px;
+            font-weight: 700;
+            color: #FFFFFF;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .section-title-large {
+            font-size: 56px;
+            font-weight: 700;
+            color: #FFFFFF;
+            margin-bottom: 30px;
+            line-height: 1.2;
+        }
+
+        .section-subtitle {
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 50px;
+            line-height: 1.6;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .marketing-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .marketing-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 8px 30px rgba(108, 123, 255, 0.3);
+        }
+
+        .card-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 25px;
+            background: linear-gradient(135deg, #6C7BFF, #DB63DB);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+        }
+
+        .card-title {
+            font-size: 22px;
+            font-weight: 600;
+            color: #FFFFFF;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .card-description {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+        }
+
+        .two-column-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .text-content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .icon-small {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #6C7BFF, #DB63DB);
+            border-radius: 12px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            vertical-align: middle;
+        }
+
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .partner-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .partner-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .partner-icon {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #6C7BFF, #DB63DB);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+        }
+
+        .partner-text {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.5;
+        }
+
+        .commission-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-top: 50px;
+            align-items: center;
+        }
+
+        .commission-box {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .commission-value {
+            font-size: 72px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #6C7BFF, #00D4AA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .commission-label {
+            font-size: 24px;
+            color: #FFFFFF;
+            margin-bottom: 20px;
+        }
+
+        .commission-note {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 15px;
+        }
+
+        .guarantees-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .guarantee-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 35px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .guarantee-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #FFFFFF;
+            margin-bottom: 15px;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .step-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            position: relative;
+        }
+
+        .step-number {
+            font-size: 64px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+        }
+
+        .step-text {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+        }
+
         .footer {
-            background: #FFD700;
-            color: #000000;
+            background: rgba(19, 7, 30, 0.8);
+            backdrop-filter: blur(20px);
+            color: #ffffff;
             padding: 40px 20px;
             margin-top: 100px;
             position: relative;
             z-index: 1;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .footer-content {
             max-width: 1400px;
             margin: 0 auto;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .footer-section {
-            flex: 1;
-            min-width: 250px;
-        }
-
-        .footer-title {
-            font-size: 18px;
-            font-weight: 600;
-            color: rgba(0, 0, 0, 0.7);
-            margin-bottom: 15px;
+            text-align: center;
         }
 
         .footer-text {
-            font-size: 16px;
-            color: #000000;
+            font-size: 18px;
+            color: #ffffff;
             line-height: 1.6;
         }
 
         .footer-link {
-            color: #000000;
+            color: #ffffff;
             text-decoration: none;
             transition: opacity 0.3s ease;
         }
@@ -312,13 +537,31 @@
                 margin: 60px auto;
             }
 
-            .footer-content {
-                flex-direction: column;
-                text-align: center;
+            .cards-grid,
+            .partners-grid,
+            .guarantees-grid {
+                grid-template-columns: 1fr;
             }
 
-            .footer-section {
-                width: 100%;
+            .two-column-layout,
+            .commission-section {
+                grid-template-columns: 1fr;
+            }
+
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 36px;
+            }
+
+            .section-title-large {
+                font-size: 42px;
+            }
+
+            .commission-value {
+                font-size: 56px;
             }
         }
     </style>
@@ -355,9 +598,195 @@
             </div>
         </div>
 
-        <!-- Секция для оффера (контент будет добавлен позже) -->
+        <!-- Маркетинговые секции -->
         <div class="offer-section" id="offer">
-            <!-- Оффер будет добавлен здесь -->
+            
+            <!-- Секция 1: Преимущества P2P -->
+            <div class="marketing-section">
+                <div class="cards-grid">
+                    <div class="marketing-card">
+                        <div class="card-icon">🚀</div>
+                        <div class="card-title">Моментальное подтверждение платежей</div>
+                        <div class="card-description">Р2Р эквайринг позволяет подтверждать платежи на прием мгновенно</div>
+                    </div>
+                    <div class="marketing-card">
+                        <div class="card-icon">⏱️</div>
+                        <div class="card-title">Без hold • Rolling • Charge Back</div>
+                        <div class="card-description">Р2Р-решение полностью исключает подобные практики</div>
+                    </div>
+                    <div class="marketing-card">
+                        <div class="card-icon">%</div>
+                        <div class="card-title">Высокая конверсия из заявки в оплату</div>
+                        <div class="card-description">Свыше 95% с помощью популярного направления Р2Р</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Секция 2: Сервис проверенный временем -->
+            <div class="marketing-section">
+                <div class="two-column-layout">
+                    <div class="text-content">
+                        <h2 class="section-title-large">Сервис проверенный временем</h2>
+                    </div>
+                    <div class="text-content">
+                        <div class="icon-small">⚡</div>
+                        <p class="card-description">Наша Р2Р-платформа обеспечивает превосходство благодаря автоматизации, клиентоориентированности и постоянному внедрению инноваций, обеспечивая минимальное время зачисления, обработку больших объемов операций, выгодные тарифы, персональный подход и доступ к передовым технологиям</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Секция 3: Работаем без посредников -->
+            <div class="marketing-section">
+                <div class="two-column-layout">
+                    <div class="text-content">
+                        <h2 class="section-title-large">Работаем без посредников</h2>
+                        <div style="display: flex; align-items: flex-start; margin-top: 20px;">
+                            <div class="icon-small">⭐</div>
+                            <p class="card-description">Все предоставляемые услуги являются нашей собственной разработкой, что позволяет давать выгодные условия, качественную техническую часть и моментальную поддержку от наших менеджеров</p>
+                        </div>
+                    </div>
+                    <div></div>
+                </div>
+                <div class="cards-grid" style="margin-top: 60px;">
+                    <div class="marketing-card">
+                        <div class="card-icon">💸</div>
+                        <div class="card-title">Моментальный вывод средств</div>
+                        <div class="card-description">Вывод в USDT, фиате, или любой другой криптовалюте на интересующие вас криптокошельки или банковские карты</div>
+                    </div>
+                    <div class="marketing-card">
+                        <div class="card-icon">🔌</div>
+                        <div class="card-title">Простота подключения</div>
+                        <div class="card-description">Гибкая и простая API библиотека, в которой мы продумали каждую мелочь для удобства работы и интеграции, а личный менеджер своевременно поможет разобраться с любыми вопросами</div>
+                    </div>
+                    <div class="marketing-card">
+                        <div class="card-icon">✓</div>
+                        <div class="card-title">Отсутствие верификации</div>
+                        <div class="card-description">Мы не запрашиваем каких-либо документов, наш сервис доступен каждому. Работаем со всеми категориями бизнеса</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Секция 4: Автоматизация, Скорость, Интеграция -->
+            <div class="marketing-section">
+                <div class="cards-grid">
+                    <div class="marketing-card">
+                        <div class="card-icon">⚙️</div>
+                        <div class="card-title">Автоматизация процессов</div>
+                        <div class="card-description">Количество реквизита и грамотное распределение платежей гарантирует стабильную работу при большом потоке заявок на прием и выплату</div>
+                    </div>
+                    <div class="marketing-card">
+                        <div class="card-icon">⚡</div>
+                        <div class="card-title">Высокая скорость сервиса</div>
+                        <div class="card-description">Автоматическое подтверждение платежей позволяет увеличивать скорость обработки транзакций</div>
+                    </div>
+                    <div class="marketing-card">
+                        <div class="card-icon">🔗</div>
+                        <div class="card-title">Быстрая интеграция в ваш сервис</div>
+                        <div class="card-description">Наши ресурсы позволяют провести интеграцию за 2 дня</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Секция 5: С кем уже работаем -->
+            <div class="marketing-section">
+                <h2 class="section-title">С кем <span style="color: #00D4AA;">уже</span> работаем?</h2>
+                <div class="partners-grid">
+                    <div class="partner-card">
+                        <div class="partner-icon">💼</div>
+                        <div class="partner-text">Криптобиржи кошельки и обменные сервисы</div>
+                    </div>
+                    <div class="partner-card">
+                        <div class="partner-icon">🏆</div>
+                        <div class="partner-text">Ставки на спорт</div>
+                    </div>
+                    <div class="partner-card">
+                        <div class="partner-icon">🛍️</div>
+                        <div class="partner-text">Онлайн магазины</div>
+                    </div>
+                    <div class="partner-card">
+                        <div class="partner-icon">💌</div>
+                        <div class="partner-text">Другие сервисы</div>
+                    </div>
+                    <div class="partner-card">
+                        <div class="partner-icon">🎰</div>
+                        <div class="partner-text">Игровые платформы</div>
+                    </div>
+                    <div class="partner-card">
+                        <div class="partner-icon">💰</div>
+                        <div class="partner-text">Финансовые сервисы</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Секция 6: Комиссия сервиса -->
+            <div class="marketing-section">
+                <h2 class="section-title">Комиссия сервиса</h2>
+                <div class="commission-section">
+                    <div class="commission-box">
+                        <div class="commission-value">6-9%</div>
+                        <div class="commission-label">Прием платежей</div>
+                        <div class="commission-note">Свяжитесь с нами, чтобы узнать больше о комиссии за прием платежей.</div>
+                    </div>
+                    <div class="commission-box">
+                        <div class="commission-value">0-3%</div>
+                        <div class="commission-label">Вывод баланса</div>
+                        <div class="commission-note">* В зависимости от выбранного способа вывода.<br>Возможно установить лимит для автоматических выплат при достижении определенного баланса.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Секция 7: Гарантии -->
+            <div class="marketing-section">
+                <div class="two-column-layout">
+                    <div class="text-content">
+                        <h2 class="section-title-large" style="color: #00D4AA; margin-bottom: 20px;">Гарантии</h2>
+                        <h3 class="section-subtitle" style="font-size: 24px; margin-bottom: 40px;">МЫ УВЕРЕНЫ В СВОЁМ ПРОДУКТЕ И ДАЕМ ВАМ ТРОЙНУЮ ГАРАНТИЮ!</h3>
+                        <div class="guarantees-grid">
+                            <div class="guarantee-card">
+                                <div class="card-icon">🔧</div>
+                                <div class="guarantee-title">Гибкость</div>
+                                <div class="card-description">Мы гарантируем внесение необходимых доработок и правок в работу сервиса для вашего комфорта.</div>
+                            </div>
+                            <div class="guarantee-card">
+                                <div class="card-icon">🛡️</div>
+                                <div class="guarantee-title">Безопасность</div>
+                                <div class="card-description">Мы гарантируем безопасность транзакций и быструю обработку ваших платежей.</div>
+                            </div>
+                            <div class="guarantee-card">
+                                <div class="card-icon">💬</div>
+                                <div class="guarantee-title">Поддержка 24/7</div>
+                                <div class="card-description">Мы гарантируем оперативную поддержку в чате и решение проблемной заявки - не более 15 минут.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div></div>
+                </div>
+            </div>
+
+            <!-- Секция 8: 4 ШАГА -->
+            <div class="marketing-section">
+                <h2 class="section-title">4 ШАГА</h2>
+                <p class="section-subtitle" style="text-align: center;">И начните принимать криптовалютные платежи с Liberty</p>
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <div class="step-text">Вы делаете запрос на подключение</div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <div class="step-text">Наши специалисты проверяют ваши ресурсы, проговариваем детали</div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <div class="step-text">Оказываем помощь в подключении к процессингу с помощью API</div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <div class="step-text">Начинаем принимать и выплачивать платежи на карты ваших клиентов</div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
         <!-- Кнопка перехода к интеграции -->
@@ -367,11 +796,8 @@
     <!-- Футер -->
     <footer class="footer">
         <div class="footer-content">
-            <div class="footer-section">
-                <div class="footer-title">Контакты</div>
-                <div class="footer-text">
-                    <a href="https://t.me/liberty_oreon_manager" class="footer-link" target="_blank">TG @liberty_oreon_manager</a>
-                </div>
+            <div class="footer-text">
+                <a href="https://t.me/liberty_oreon_manager" class="footer-link" target="_blank">tg @liberty_oreon_manager</a>
             </div>
         </div>
     </footer>
