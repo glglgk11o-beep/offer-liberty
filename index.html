@@ -19,6 +19,8 @@
             position: relative;
             overflow-x: hidden;
             color: #ffffff;
+            display: flex;
+            flex-direction: column;
         }
 
         /* Текстура фона для эффекта зернистости */
@@ -43,6 +45,7 @@
             max-width: 1400px;
             margin: 0 auto;
             padding: 60px 20px;
+            flex: 1;
         }
 
         .header {
@@ -172,6 +175,89 @@
             line-height: 1.3;
         }
 
+        .offer-section {
+            margin-top: 100px;
+            margin-bottom: 80px;
+            animation: fadeInUp 0.8s ease-out 0.6s both;
+        }
+
+        .cta-button {
+            display: block;
+            width: 100%;
+            max-width: 600px;
+            margin: 80px auto;
+            padding: 24px 50px;
+            background: linear-gradient(135deg, #6C7BFF 0%, #DB63DB 100%);
+            color: #FFFFFF;
+            font-size: 24px;
+            font-weight: 700;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(108, 123, 255, 0.4);
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.8s ease-out 0.8s both;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(108, 123, 255, 0.6);
+            background: linear-gradient(135deg, #7C8BFF 0%, #EB73EB 100%);
+        }
+
+        .cta-button:active {
+            transform: translateY(-1px);
+        }
+
+        .footer {
+            background: #FFD700;
+            color: #000000;
+            padding: 40px 20px;
+            margin-top: 100px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .footer-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: rgba(0, 0, 0, 0.7);
+            margin-bottom: 15px;
+        }
+
+        .footer-text {
+            font-size: 16px;
+            color: #000000;
+            line-height: 1.6;
+        }
+
+        .footer-link {
+            color: #000000;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-link:hover {
+            opacity: 0.7;
+        }
+
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -219,6 +305,21 @@
             .container {
                 padding: 40px 15px;
             }
+
+            .cta-button {
+                font-size: 20px;
+                padding: 20px 30px;
+                margin: 60px auto;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-section {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -250,9 +351,29 @@
             
             <div class="feature-card">
                 <div class="feature-number">04</div>
-                <div class="feature-title">Конверсия 70%</div>
+                <div class="feature-title">Интеграция</div>
             </div>
         </div>
+
+        <!-- Секция для оффера (контент будет добавлен позже) -->
+        <div class="offer-section" id="offer">
+            <!-- Оффер будет добавлен здесь -->
+        </div>
+
+        <!-- Кнопка перехода к интеграции -->
+        <a href="integration.html" class="cta-button">перейти к интеграции</a>
     </div>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-title">Контакты</div>
+                <div class="footer-text">
+                    <a href="https://t.me/liberty_oreon_manager" class="footer-link" target="_blank">TG @liberty_oreon_manager</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
