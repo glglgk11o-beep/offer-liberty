@@ -17,13 +17,12 @@
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             min-height: 100vh;
-            background: linear-gradient(135deg, #13071E 0%, #6C7BFF 50%, #DB63DB 75%, #FEF3FF 100%);
+            background: linear-gradient(180deg, #000000 0%, #1a0a2e 50%, #2d1b4e 100%);
             background-attachment: fixed;
             position: relative;
             overflow-x: hidden;
             color: #ffffff;
-            display: flex;
-            flex-direction: column;
+            padding: 40px 20px;
         }
 
         body::before {
@@ -34,11 +33,11 @@
             width: 100%;
             height: 100%;
             background-image: 
-                radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0);
+                radial-gradient(circle at 1px 1px, rgba(255,255,255,0.1) 1px, transparent 0);
             background-size: 20px 20px;
             pointer-events: none;
             z-index: 0;
-            opacity: 0.4;
+            opacity: 0.3;
         }
 
         .container {
@@ -46,8 +45,172 @@
             z-index: 1;
             max-width: 1400px;
             margin: 0 auto;
-            padding: 60px 20px;
-            flex: 1;
+        }
+
+        .header-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .logo-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .logo-title {
+            font-size: 72px;
+            font-weight: 700;
+            color: #FFFFFF;
+            letter-spacing: -2px;
+        }
+
+        .country-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            padding: 12px 24px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #FFFFFF;
+        }
+
+        .country-flag-small {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .service-info {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            border-radius: 16px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            min-width: 300px;
+        }
+
+        .service-info-item {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .service-info-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .service-info-label {
+            font-weight: 600;
+            color: #FFFFFF;
+        }
+
+        .payment-table {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            border-radius: 16px;
+            padding: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            margin-bottom: 30px;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            text-align: left;
+            padding: 20px 15px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #FFFFFF;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            white-space: nowrap;
+        }
+
+        td {
+            padding: 20px 15px;
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.9);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            vertical-align: top;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .method-name {
+            font-weight: 600;
+            color: #FFFFFF;
+        }
+
+        .rate-item {
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        .rate-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .limits-box {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            border-radius: 16px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            margin-bottom: 30px;
+        }
+
+        .limits-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #FFFFFF;
+            margin-bottom: 20px;
+        }
+
+        .limits-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .limits-table th {
+            padding: 15px;
+            font-size: 15px;
+        }
+
+        .limits-table td {
+            padding: 15px;
+            font-size: 15px;
+        }
+
+        .ghost-container {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 300px;
+            height: 300px;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.6;
+        }
+
+        .ghost-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
 
         .back-link {
@@ -56,90 +219,125 @@
             gap: 10px;
             color: rgba(255, 255, 255, 0.8);
             text-decoration: none;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             transition: color 0.3s ease;
+            position: relative;
+            z-index: 10;
         }
 
         .back-link:hover {
             color: #ffffff;
         }
 
-        .region-header {
-            text-align: center;
-            margin-bottom: 60px;
+        .settlement-note {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.7);
+            font-style: italic;
+            margin-top: 8px;
         }
 
-        .region-flag-large {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            border: 4px solid rgba(255, 255, 255, 0.3);
-            margin: 0 auto 30px;
-            object-fit: cover;
-        }
+        @media (max-width: 768px) {
+            .logo-title {
+                font-size: 48px;
+            }
 
-        .region-title {
-            font-size: 64px;
-            font-weight: 700;
-            color: #FFFFFF;
-            margin-bottom: 20px;
-            text-shadow: 0 2px 20px rgba(108, 123, 255, 0.3);
-        }
+            .header-section {
+                flex-direction: column;
+            }
 
-        .region-content {
-            background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(20px);
-            border-radius: 24px;
-            padding: 50px;
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        }
+            .service-info {
+                width: 100%;
+            }
 
-        .content-section {
-            margin-bottom: 40px;
-        }
+            .payment-table, .limits-box {
+                padding: 20px;
+            }
 
-        .content-section:last-child {
-            margin-bottom: 0;
-        }
+            table {
+                font-size: 14px;
+            }
 
-        .content-title {
-            font-size: 32px;
-            font-weight: 600;
-            color: #FFFFFF;
-            margin-bottom: 20px;
-        }
+            th, td {
+                padding: 12px 8px;
+            }
 
-        .content-text {
-            font-size: 20px;
-            color: rgba(255, 255, 255, 0.9);
-            line-height: 1.8;
+            .ghost-container {
+                width: 200px;
+                height: 200px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <a href="/" class="back-link">← Назад на главную</a>
-        
-        <div class="region-header">
-            <img src="images/az.png" alt="Азербайджан" class="region-flag-large">
-            <h1 class="region-title">Азербайджан</h1>
+
+        <div class="header-section">
+            <div class="logo-section">
+                <h1 class="logo-title">Liberty</h1>
+                <div class="country-badge">
+                    <img src="images/az.png" alt="AZ" class="country-flag-small">
+                    <span>AZERBAIJAN</span>
+                </div>
+            </div>
+
+            <div class="service-info">
+                <div class="service-info-item">
+                    <span class="service-info-label">TYPE:</span> IGAMING / EXCHANGE / FOREX
+                </div>
+                <div class="service-info-item">
+                    <span class="service-info-label">CURRENCY:</span> AZN
+                </div>
+                <div class="service-info-item">
+                    <span class="service-info-label">INTEGRATION:</span> H2H / REDIRECT
+                </div>
+            </div>
         </div>
 
-        <div class="region-content">
-            <div class="content-section">
-                <h2 class="content-title">Информация о регионе</h2>
-                <p class="content-text">
-                    Здесь будет информация о работе Liberty в Азербайджане. Добавьте контент, который хотите показать пользователям из этого региона.
-                </p>
-            </div>
+        <div class="payment-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>METHOD</th>
+                        <th>PAY IN</th>
+                        <th>PAY OUT</th>
+                        <th>SETTLEMENT / CYCLE / SOURCE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="method-name">P2P</td>
+                        <td>7%</td>
+                        <td>2%</td>
+                        <td>
+                            0% / T+O / BINANCE
+                            <div class="settlement-note">AVERAGE VALUE OF LINES 1-10</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
-            <div class="content-section">
-                <h2 class="content-title">Особенности работы</h2>
-                <p class="content-text">
-                    Опишите особенности работы с азербайджанским рынком, доступные методы оплаты, тарифы и другую релевантную информацию.
-                </p>
-            </div>
+        <div class="limits-box">
+            <div class="limits-title">LIMITS</div>
+            <table class="limits-table">
+                <thead>
+                    <tr>
+                        <th>PAY IN</th>
+                        <th>PAY OUT</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>30-5000 AZN</td>
+                        <td>30-1000 AZN</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="ghost-container">
+            <img src="images/symbol_gradient.png" alt="Ghost" class="ghost-image">
         </div>
     </div>
 </body>
