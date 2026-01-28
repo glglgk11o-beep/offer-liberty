@@ -165,6 +165,15 @@
             margin-bottom: 0;
         }
 
+        .settlement-item {
+            margin-bottom: 4px;
+            line-height: 1.5;
+        }
+
+        .settlement-item:last-child {
+            margin-bottom: 0;
+        }
+
         .ghost-container {
             position: fixed;
             bottom: 0;
@@ -280,7 +289,7 @@
                             <div class="rate-item">15K - 40K RUB = 2,5%</div>
                             <div class="rate-item">40K - 300000K RUB = 2%</div>
                         </td>
-                        <td>0% / T+O / RAPIRA | BYBIT</td>
+                        <td></td>
                     </tr>
                     <tr>
                         <td class="method-name">MOB COM</td>
@@ -288,7 +297,7 @@
                             <div class="rate-item">100-15K RUB = 19%</div>
                         </td>
                         <td></td>
-                        <td></td>
+                        <td>0% / T+O / RAPIRA | BYBIT</td>
                     </tr>
                     <tr>
                         <td class="method-name">MONO BANK</td>
@@ -316,7 +325,10 @@
                             <div class="rate-item">RAPIRA RED +8%</div>
                         </td>
                         <td></td>
-                        <td>0% / T+O</td>
+                        <td>
+                            <div class="settlement-item">0% / T+O /</div>
+                            <div class="settlement-item">RAPIRA | BYBIT</div>
+                        </td>
                     </tr>
                     <tr>
                         <td class="method-name">QR NSPK STATIC</td>
