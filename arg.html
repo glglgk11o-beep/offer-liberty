@@ -8,7 +8,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
@@ -24,16 +28,24 @@
         body::before {
             content: '';
             position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.1) 1px, transparent 0);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                radial-gradient(circle at 1px 1px, rgba(255,255,255,0.1) 1px, transparent 0);
             background-size: 20px 20px;
             pointer-events: none;
             z-index: 0;
             opacity: 0.3;
         }
 
-        .container { position: relative; z-index: 1; max-width: 1400px; margin: 0 auto; }
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
 
         .header-section {
             display: flex;
@@ -44,133 +56,177 @@
             gap: 30px;
         }
 
-        .logo-section { display: flex; flex-direction: column; gap: 20px; }
+        .logo-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
 
-        .logo-title { font-size: 72px; font-weight: 700; color: #fff; letter-spacing: -2px; }
+        .logo-title {
+            font-size: 72px;
+            font-weight: 700;
+            color: #FFFFFF;
+            letter-spacing: -2px;
+        }
 
         .country-badge {
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            background: rgba(255,255,255,0.1);
-            border: 1px solid rgba(255,255,255,0.2);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 50px;
             padding: 12px 24px;
             font-size: 18px;
             font-weight: 600;
-            color: #fff;
+            color: #FFFFFF;
         }
 
         .country-flag-small {
-            width: 24px; height: 24px;
+            width: 24px;
+            height: 24px;
             border-radius: 50%;
             object-fit: cover;
         }
 
         .service-info {
-            background: rgba(255,255,255,0.08);
+            background: rgba(255, 255, 255, 0.08);
             backdrop-filter: blur(20px);
             border-radius: 16px;
             padding: 30px;
-            border: 1px solid rgba(255,255,255,0.15);
+            border: 1px solid rgba(255, 255, 255, 0.15);
             min-width: 300px;
         }
 
         .service-info-item {
             font-size: 16px;
-            color: rgba(255,255,255,0.9);
+            color: rgba(255, 255, 255, 0.9);
             margin-bottom: 12px;
             line-height: 1.6;
         }
-        .service-info-item:last-child { margin-bottom: 0; }
-        .service-info-label { font-weight: 600; }
+
+        .service-info-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .service-info-label {
+            font-weight: 600;
+            color: #FFFFFF;
+        }
 
         .payment-table {
-            background: rgba(255,255,255,0.08);
+            background: rgba(255, 255, 255, 0.08);
             backdrop-filter: blur(20px);
             border-radius: 16px;
             padding: 40px;
-            border: 1px solid rgba(255,255,255,0.15);
-            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            margin-bottom: 40px;
             overflow-x: auto;
         }
 
-        table { width: 100%; border-collapse: collapse; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
 
         th {
             text-align: left;
             padding: 20px 15px;
             font-size: 16px;
             font-weight: 600;
-            color: #fff;
-            border-bottom: 2px solid rgba(255,255,255,0.2);
+            color: #FFFFFF;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
             white-space: nowrap;
         }
 
         td {
             padding: 20px 15px;
             font-size: 15px;
-            color: rgba(255,255,255,0.9);
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255, 255, 255, 0.9);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             vertical-align: top;
         }
 
-        tr:last-child td { border-bottom: none; }
-
-        .method-name { font-weight: 600; }
-
-        .limits-box {
-            background: rgba(255,255,255,0.08);
-            backdrop-filter: blur(20px);
-            border-radius: 16px;
-            padding: 30px;
-            border: 1px solid rgba(255,255,255,0.15);
-            margin-bottom: 30px;
+        tr:last-child td {
+            border-bottom: none;
         }
 
-        .limits-title { font-size: 18px; font-weight: 600; margin-bottom: 20px; }
+        .method-name {
+            font-weight: 600;
+            color: #FFFFFF;
+        }
 
-        .limits-table { width: 100%; border-collapse: collapse; }
-        .limits-table th, .limits-table td { padding: 15px; font-size: 15px; }
+        .rate-item {
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        .rate-item:last-child {
+            margin-bottom: 0;
+        }
 
         .ghost-container {
             position: fixed;
-            bottom: 0; left: 0;
-            width: 260px; height: 260px;
+            bottom: 0;
+            right: 0;
+            width: 300px;
+            height: 300px;
             z-index: 0;
             pointer-events: none;
-            opacity: 0.8;
+            opacity: 0.6;
         }
 
-        .ghost-image { width: 100%; height: 100%; object-fit: contain; }
+        .ghost-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
 
         .back-link {
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            color: rgba(255,255,255,0.8);
+            color: rgba(255, 255, 255, 0.8);
             text-decoration: none;
             margin-bottom: 30px;
             transition: color 0.3s ease;
             position: relative;
             z-index: 10;
         }
-        .back-link:hover { color: #fff; }
 
-        .settlement-note {
-            font-size: 13px;
-            color: rgba(255,255,255,0.7);
-            font-style: italic;
-            margin-top: 8px;
+        .back-link:hover {
+            color: #ffffff;
         }
 
         @media (max-width: 768px) {
-            .logo-title { font-size: 48px; }
-            .header-section { flex-direction: column; }
-            .service-info { width: 100%; }
-            .payment-table, .limits-box { padding: 20px; }
-            th, td { padding: 12px 8px; }
-            .ghost-container { width: 200px; height: 200px; }
+            .logo-title {
+                font-size: 48px;
+            }
+
+            .header-section {
+                flex-direction: column;
+            }
+
+            .service-info {
+                width: 100%;
+            }
+
+            .payment-table {
+                padding: 20px;
+            }
+
+            table {
+                font-size: 14px;
+            }
+
+            th, td {
+                padding: 12px 8px;
+            }
+
+            .ghost-container {
+                width: 200px;
+                height: 200px;
+            }
         }
     </style>
 </head>
@@ -200,6 +256,7 @@
             </div>
         </div>
 
+        <!-- Основная таблица тарифов -->
         <div class="payment-table">
             <table>
                 <thead>
@@ -213,30 +270,40 @@
                 <tbody>
                     <tr>
                         <td class="method-name">P2P</td>
-                        <td>6%</td>
-                        <td>2%</td>
                         <td>
-                            0% / T+0 / BINANCE
-                            <div class="settlement-note">AVERAGE VALUE OF LINES 1‑10</div>
+                            <div class="rate-item">6%</div>
+                        </td>
+                        <td>
+                            <div class="rate-item">2%</div>
+                        </td>
+                        <td>
+                            <div class="rate-item">0% / T+0 / BINANCE</div>
+                            <div class="rate-item">AVERAGE VALUE OF LINES 1–10</div>
                         </td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
-        <div class="limits-box">
-            <div class="limits-title">LIMITS</div>
-            <table class="limits-table">
+        <!-- Таблица лимитов -->
+        <div class="payment-table">
+            <table>
                 <thead>
                     <tr>
+                        <th>LIMITS</th>
                         <th>PAY IN</th>
                         <th>PAY OUT</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>2000 - 1 000 000 ARS</td>
-                        <td>2000 - 1 000 000 ARS</td>
+                        <td class="method-name"></td>
+                        <td>
+                            <div class="rate-item">2000 - 1 000 000 ARS</div>
+                        </td>
+                        <td>
+                            <div class="rate-item">2000 - 1 000 000 ARS</div>
+                        </td>
                     </tr>
                 </tbody>
             </table>
