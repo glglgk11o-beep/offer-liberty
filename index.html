@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Liberty</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -12,7 +15,7 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             min-height: 100vh;
             background: linear-gradient(135deg, #13071E 0%, #6C7BFF 50%, #DB63DB 75%, #FEF3FF 100%);
             background-attachment: fixed;
@@ -50,7 +53,7 @@
         .telegram-icon {
             width: 20px;
             height: 20px;
-            stroke: #00D4AA;
+            stroke: #ffffff;
             fill: none;
             stroke-width: 2;
             stroke-linecap: round;
@@ -65,7 +68,7 @@
         }
 
         .telegram-text .telegram-word {
-            color: #00D4AA;
+            color: #ffffff;
             font-weight: 600;
         }
 
@@ -172,10 +175,7 @@
         .subtitle-gradient {
             font-size: 48px;
             font-weight: 700;
-            background: linear-gradient(90deg, #00D4AA 0%, #00FFD4 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #ffffff;
             text-transform: uppercase;
             letter-spacing: 1px;
             line-height: 1.2;
@@ -358,35 +358,6 @@
             animation: fadeInUp 0.8s ease-out 0.6s both;
         }
 
-        .cta-button {
-            display: block;
-            width: 100%;
-            max-width: 600px;
-            margin: 80px auto;
-            padding: 24px 50px;
-            background: linear-gradient(135deg, #6C7BFF 0%, #DB63DB 100%);
-            color: #FFFFFF;
-            font-size: 24px;
-            font-weight: 700;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 16px;
-            box-shadow: 0 8px 30px rgba(108, 123, 255, 0.4);
-            transition: all 0.3s ease;
-            animation: fadeInUp 0.8s ease-out 0.8s both;
-            border: none;
-            cursor: pointer;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 40px rgba(108, 123, 255, 0.6);
-            background: linear-gradient(135deg, #7C8BFF 0%, #EB73EB 100%);
-        }
-
-        .cta-button:active {
-            transform: translateY(-1px);
-        }
 
         /* Маркетинговые секции */
         .marketing-section {
@@ -409,15 +380,23 @@
             font-size: 56px;
             font-weight: 700;
             color: #FFFFFF;
-            margin-bottom: 30px;
+            margin-bottom: 0;
             line-height: 1.2;
+            letter-spacing: -1px;
         }
 
         .section-subtitle {
             font-size: 20px;
-            color: rgba(255, 255, 255, 0.8);
+            color: rgba(255, 255, 255, 0.9);
             margin-bottom: 50px;
             line-height: 1.6;
+        }
+
+        .section-description-large {
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.8;
+            max-width: 100%;
         }
 
         .cards-grid {
@@ -482,15 +461,20 @@
         .two-column-layout {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
+            gap: 80px;
+            align-items: start;
             margin-top: 50px;
         }
 
         .text-content {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 30px;
+        }
+
+        .text-content-full {
+            grid-column: 1 / -1;
+            max-width: 100%;
         }
 
         .icon-small {
@@ -574,7 +558,7 @@
         .commission-value {
             font-size: 72px;
             font-weight: 700;
-            background: linear-gradient(135deg, #6C7BFF, #00D4AA);
+            background: linear-gradient(135deg, #6C7BFF, #DB63DB);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -650,17 +634,14 @@
         .step-number {
             font-size: 64px;
             font-weight: 700;
-            background: linear-gradient(135deg, #FFD700, #FFA500);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #ffffff;
             margin-bottom: 20px;
         }
 
         .step-text {
-            font-size: 18px;
+            font-size: 20px;
             color: rgba(255, 255, 255, 0.9);
-            line-height: 1.6;
+            line-height: 1.8;
         }
 
         .footer {
@@ -791,11 +772,6 @@
                 padding: 40px 15px;
             }
 
-            .cta-button {
-                font-size: 20px;
-                padding: 20px 30px;
-                margin: 60px auto;
-            }
 
             .cards-grid,
             .partners-grid,
@@ -896,17 +872,17 @@
             
             <div class="feature-card">
                 <div class="feature-number">02</div>
-                <div class="feature-title">Большое количество крупных команд</div>
+                <div class="feature-title">большое количество крупных команд</div>
             </div>
             
             <div class="feature-card">
                 <div class="feature-number">03</div>
-                <div class="feature-title">Работаем в большом количестве гео</div>
+                <div class="feature-title">Работаем с очень большим количеством гео</div>
             </div>
             
             <div class="feature-card">
                 <div class="feature-number">04</div>
-                <div class="feature-title">Простая интеграция</div>
+                <div class="feature-title">Интеграция</div>
             </div>
         </div>
 
@@ -938,11 +914,13 @@
             <div class="marketing-section">
                 <div class="two-column-layout">
                     <div class="text-content">
-                        <h2 class="section-title-large">Сервис проверенный временем</h2>
+                        <h2 class="section-title-large">Сервис проверенный<br>временем</h2>
                     </div>
                     <div class="text-content">
-                        <div class="icon-small">⚡</div>
-                        <p class="card-description">Наша Р2Р-платформа обеспечивает превосходство благодаря автоматизации, клиентоориентированности и постоянному внедрению инноваций, обеспечивая минимальное время зачисления, обработку больших объемов операций, выгодные тарифы, персональный подход и доступ к передовым технологиям</p>
+                        <div style="display: flex; align-items: flex-start; gap: 15px;">
+                            <div class="icon-small">⚡</div>
+                            <p class="section-description-large">Наша Р2Р-платформа обеспечивает превосходство благодаря автоматизации, клиентоориентированности и постоянному внедрению инноваций, обеспечивая минимальное время зачисления, обработку больших объемов операций, выгодные тарифы, персональный подход и доступ к передовым технологиям</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -951,10 +929,10 @@
             <div class="marketing-section">
                 <div class="two-column-layout">
                     <div class="text-content">
-                        <h2 class="section-title-large">Работаем без посредников</h2>
-                        <div style="display: flex; align-items: flex-start; margin-top: 20px;">
+                        <h2 class="section-title-large">Работаем без<br>посредников</h2>
+                        <div style="display: flex; align-items: flex-start; gap: 15px; margin-top: 30px;">
                             <div class="icon-small">⭐</div>
-                            <p class="card-description">Все предоставляемые услуги являются нашей собственной разработкой, что позволяет давать выгодные условия, качественную техническую часть и моментальную поддержку от наших менеджеров</p>
+                            <p class="section-description-large">Все предоставляемые услуги являются нашей собственной разработкой, что позволяет давать выгодные условия, качественную техническую часть и моментальную поддержку от наших менеджеров</p>
                         </div>
                     </div>
                     <div></div>
@@ -1001,7 +979,7 @@
 
             <!-- Секция 5: С кем уже работаем -->
             <div class="marketing-section">
-                <h2 class="section-title">С кем <span style="color: #00D4AA;">уже</span> работаем?</h2>
+                <h2 class="section-title">С кем <span style="color: #ffffff;">уже</span> работаем?</h2>
                 <div class="partners-grid">
                     <div class="partner-card">
                         <div class="partner-icon">💼</div>
@@ -1051,7 +1029,7 @@
             <div class="marketing-section">
                 <div class="two-column-layout">
                     <div class="text-content">
-                        <h2 class="section-title-large" style="color: #00D4AA; margin-bottom: 20px;">Гарантии</h2>
+                        <h2 class="section-title-large" style="margin-bottom: 20px;">Гарантии</h2>
                         <h3 class="section-subtitle" style="font-size: 24px; margin-bottom: 40px;">МЫ УВЕРЕНЫ В СВОЁМ ПРОДУКТЕ И ДАЕМ ВАМ ТРОЙНУЮ ГАРАНТИЮ!</h3>
                         <div class="guarantees-grid">
                             <div class="guarantee-card">
@@ -1078,7 +1056,7 @@
             <!-- Секция 8: 4 ШАГА -->
             <div class="marketing-section">
                 <h2 class="section-title">4 ШАГА</h2>
-                <p class="section-subtitle" style="text-align: center;">И начните принимать криптовалютные платежи с Liberty</p>
+                <p class="section-subtitle" style="text-align: center; font-size: 20px;">И начните принимать криптовалютные платежи с Liberty</p>
                 <div class="steps-grid">
                     <div class="step-card">
                         <div class="step-number">1</div>
@@ -1100,9 +1078,6 @@
             </div>
 
         </div>
-
-        <!-- Кнопка перехода к интеграции -->
-        <a href="integration.html" class="cta-button">перейти к интеграции</a>
     </div>
 
     <!-- Футер -->
