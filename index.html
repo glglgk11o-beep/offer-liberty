@@ -163,14 +163,7 @@
             animation: fadeInDown 1s ease-out 0.2s both;
         }
 
-        .subtitle-main {
-            font-size: 32px;
-            font-weight: 700;
-            color: #FFFFFF;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
-        }
+        /* .subtitle-main убрана, чтобы не показывать PEER TO PEER (P2P) */
 
         .subtitle-gradient {
             font-size: 48px;
@@ -478,16 +471,21 @@
             max-width: 100%;
         }
 
+        /* Значок со звёздочкой – увеличен и сделан более объёмным */
         .icon-small {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, #6C7BFF, #DB63DB);
-            border-radius: 12px;
+            width: 64px;
+            height: 64px;
+            background: radial-gradient(circle at 30% 20%, #FFE082, #FFC107 40%, #FF9800 80%);
+            border-radius: 18px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
             margin-right: 15px;
             vertical-align: middle;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35), 0 0 20px rgba(255, 193, 7, 0.6);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            font-size: 28px;
+            color: #ffffff;
         }
 
         .partners-grid {
@@ -706,10 +704,6 @@
                 font-size: 42px;
             }
 
-            .subtitle-main {
-                font-size: 24px;
-            }
-
             .subtitle-gradient {
                 font-size: 32px;
             }
@@ -814,6 +808,12 @@
             .commission-value {
                 font-size: 56px;
             }
+
+            .icon-small {
+                width: 56px;
+                height: 56px;
+                font-size: 24px;
+            }
         }
     </style>
 </head>
@@ -833,8 +833,8 @@
             </div>
             <h1 class="title">Liberty</h1>
             <div class="subtitle">
-                <div class="subtitle-main">PEER TO PEER (P2P)</div>
-                <div class="subtitle-gradient">ПЛАТЕЖНАЯ СИСТЕМА<br>ВЫСОКОЙ КОНВЕРСИИ</div>
+                <!-- Строка PEER TO PEER (P2P) удалена -->
+                <div class="subtitle-gradient">ПЛАТЕЖНАЯ СИСТЕМА</div>
                 <div class="subtitle-tagline">Стабильность и масштабируемость для устойчивого роста вашего бизнеса!</div>
             </div>
         </header>
@@ -877,7 +877,7 @@
                     <span class="region-code">AZ</span>
                 </a>
 
-                <!-- НОВЫЕ СТРАНЫ -->
+                <!-- Новые страны -->
                 <a href="/arg" class="region-item">
                     <img src="images/arg.png" alt="ARG" class="region-flag">
                     <span class="region-code">ARG</span>
@@ -906,17 +906,17 @@
             
             <div class="feature-card">
                 <div class="feature-number">02</div>
-                <div class="feature-title">Много крупных команд</div>
+                <div class="feature-title">большое количество крупных команд</div>
             </div>
             
             <div class="feature-card">
                 <div class="feature-number">03</div>
-                <div class="feature-title">Работаем в большом количестве гео</div>
+                <div class="feature-title">Работаем с очень большим количеством гео</div>
             </div>
             
             <div class="feature-card">
                 <div class="feature-number">04</div>
-                <div class="feature-title">Быстрая интеграция</div>
+                <div class="feature-title">Интеграция</div>
             </div>
         </div>
 
@@ -1102,4 +1102,3 @@
     </footer>
 </body>
 </html>
-
